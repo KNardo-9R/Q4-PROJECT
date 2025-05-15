@@ -1,15 +1,17 @@
 .navbar-nav .nav-link {
-  color: white;
+  color: #E6E8E6;
 }
 
 .navbar-brand {
-  color: white !important;
+  color: #E6E8E6 !important;
 }
 
 body {
     font-family: "Kanit", sans-serif;
     background-image: url(LINK);
     background-size: cover;
+    color: #505D7B;
+    background-color: #E6E8E6;
 }
 
 .kanit-regular {
@@ -21,6 +23,7 @@ body {
 .card {
   height: 100%;
   display: flex;
+  color: #505D7B;
 }
 
 footer {
@@ -29,3 +32,4 @@ footer {
     color: #28242D;
     text-align: center;
 }
+
