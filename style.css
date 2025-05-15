@@ -8,10 +8,8 @@
 
 body {
     font-family: "Kanit", sans-serif;
-    background-image: url(LINK);
-    background-size: cover;
-    color: #505D7B;
     background-color: #E6E8E6;
+    color: #505D7B;
 }
 
 .kanit-regular {
