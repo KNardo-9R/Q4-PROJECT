@@ -1,5 +1,5 @@
 // Oliveros
-// Handles Feedback Form Submission with Math Methods and Conditional Statements
+// Handle Feedback Form Submission with Math Methods and Conditional Statements
 document.addEventListener("DOMContentLoaded", function() {
   var form = document.getElementById("comment");
   var resultDiv = document.getElementById("feedbackResult");
@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // Gets values
+      // Get values
       var email = document.getElementById("email").value.trim();
       var feedback = document.getElementById("feedback").value.trim();
-      let rating = document.getElementById("rating").valuea;
+      let rating = document.getElementById("rating").value;
 
       // Validation & Example of Math Methods/Conditionals
       if (isNaN(rating)) {
