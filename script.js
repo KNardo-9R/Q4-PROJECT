@@ -62,6 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <em>Your feedback:</em> "${feedback}"<br>
           <em>Your rating:</em> ${rating}
         </div>
+
+        // Clear the form for new feedback
+      form.reset();
+      charCounter.textContent = maxChars + " characters left";
+      livePreview.innerHTML = "";
       `;
     });
   }
