@@ -11,26 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Get values
       var email = document.getElementById("email").value.trim();
       var feedback = document.getElementById("feedback").value.trim();
-      var feedbackInput = document.getElementById("feedback");
-      var charCounter = document.getElementById("charCounter");
-      var livePreview = document.getElementById("livePreview");
-      var maxChars = 200;
       let rating = document.getElementById("rating").value;
 
-      // Character counter for feedback box
-  feedbackInput.addEventListener("input", function() {
-    var left = maxChars - feedbackInput.value.length;
-    if (left < 0) left = 0;
-    charCounter.textContent = left + " characters left";
-    // Live preview
-    if (feedbackInput.value.length > 0) {
-      livePreview.innerHTML = "<b>Live Preview:</b> " + feedbackInput.value;
-    } else {
-      livePreview.innerHTML = "";
-    }
-  });
-  // Show counter at start
-  charCounter.textContent = maxChars + " characters left";
+      
 
       // Validation & Example of Math Methods/Conditionals
       if (isNaN(rating)) {
@@ -62,11 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
           <em>Your feedback:</em> "${feedback}"<br>
           <em>Your rating:</em> ${rating}
         </div>
-
-        // Clear the form for new feedback
-      form.reset();
-      charCounter.textContent = maxChars + " characters left";
-      livePreview.innerHTML = "";
       `;
     });
   }
