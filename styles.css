@@ -27,9 +27,12 @@ body {
   color: #505D7B;
 }
 
-footer {
-    margin: 0px;
-    padding: 0px;
-    color: #28242D;
-    text-align: center;
-} 
+/*CAÑETE*/
+.footer {
+  background-color: #505D7B;
+  color: black;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
