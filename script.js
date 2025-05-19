@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var emailInput = document.getElementById("email");
 
   // --- Character counter setup ---
-  var maxChars = 200;
+  var maxChars = 1000;
   // Create counter element
   var charCounter = document.createElement("div");
   charCounter.style.textAlign = "right";
