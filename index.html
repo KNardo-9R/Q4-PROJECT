@@ -47,7 +47,9 @@
   </nav>
   <!-- END OF NAVIGATION BAR -->
 
-<!-- PAGES -->
+  <!-- PAGES -->
+  <div class="tab-content row justify-content-center">
+
     <!-- START: HOME // NARDO, VILLAFUERTE, YAO -->
     <div id="home" class="container tab-pane active text-center"><br>
       <h1 class="text-center"><b>Know Our Team</b></h1>
@@ -233,7 +235,7 @@
   
     <!-- START: PROJECTS // YAO -->
     <div id="projects" class="container tab-pane fade text-center"><br>
-      <h1 class="text-center"><b>PROJECTS</b></h1>
+      <h1 class="text-center"><b>Projects</b></h1>
       <div class="container">
       <div class="row justify-content-center">
         <hr>
@@ -394,16 +396,18 @@
         </div>
 
         <div class="mb-3">
-          <label for="feedback" class="form-label">Feedback:</label>
-          <textarea class="form-control" rows="5" id="feedback" name="feedback" required></textarea>
-        </div>
-        <!-- Oliveros -->
-        <div class="mb-3">
           <label for="rating" class="form-label">Rate our website (1 to 5):</label>
           <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
         </div>
 
+        <div class="mb-3">
+          <label for="feedback" class="form-label">Feedback:</label>
+          <textarea class="form-control" rows="5" id="feedback" name="feedback" required></textarea>
+        </div>
+
+        <br>
         <button type="submit" class="btn btn-dark">Submit Feedback</button>
+        <button type="button" class="btn btn-dark" onClick="window.location.reload()">Reload Website</button>
       </form>
       <div id="feedbackResult" class="mt-3"></div>
     </div>
