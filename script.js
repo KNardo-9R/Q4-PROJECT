@@ -1,5 +1,6 @@
 // Oliveros
 // Feedback Form Script with Character Counter and Live Preview
+
 document.addEventListener("DOMContentLoaded", function() {
   var form = document.getElementById("comment");
   var resultDiv = document.getElementById("feedbackResult");
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var emailInput = document.getElementById("email");
 
   // --- Character counter setup ---
-  var maxChars = 1000;
+  var maxChars = 200;
   // Create counter element
   var charCounter = document.createElement("div");
   charCounter.style.textAlign = "right";
@@ -37,52 +38,53 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initialize the character counter
   charCounter.textContent = maxChars + " characters left";
 
-// Handle Feedback Form Submission with Math Methods and Conditional Statements
-document.addEventListener("DOMContentLoaded", function() {
-  var form = document.getElementById("comment");
-  var resultDiv = document.getElementById("feedbackResult");
-
+  // --- Feedback form submission handler ---
   if (form) {
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // Get values
-      var email = document.getElementById("email").value.trim();
-      var feedback = document.getElementById("feedback").value.trim();
-      let rating = document.getElementById("rating").value;
+      // Get values and trim
+      var email = emailInput.value.trim();
+      var feedback = feedbackInput.value.trim();
+      var rating = ratingInput.value.trim();
 
-      
-
-      // Validation & Example of Math Methods/Conditionals
-      if (isNaN(rating)) {
-        resultDiv.innerHTML = '<div class="alert alert-danger">Please enter a valid number for rating.</div>';
+      // Basic validation
+      if (email === "" || feedback === "" || rating === "") {
+        resultDiv.innerHTML = '<div class="alert alert-danger">Please fill out all fields.</div>';
         return;
       }
 
-      // Clamp rating between 1 and 5 using Math.min/Math.max
-      rating = Math.max(1, Math.min(5, rating));
-
-      // Give feedback based on rating (Conditional Statements)
-      let message = "";
-      if (rating === 5) {
-        message = "Thank you for the amazing rating!";
-      } else if (rating >= 4) {
-        message = "We're glad you enjoyed it! Thank you!";
-      } else if (rating >= 3) {
-        message = "Thanks for your feedback! We'll strive to improve.";
-      } else if (rating >= 2) {
-        message = "We appreciate your honesty. We'll work on getting better.";
-      } else {
-        message = "Sorry that your experience wasn't great. Please let us know how we can improve.";
+      if (isNaN(rating)) {
+        resultDiv.innerHTML = '<div class="alert alert-danger">Please enter a number for rating!</div>';
+        return;
       }
 
-      // Display result
-      resultDiv.innerHTML = `
-        <div class="alert alert-success">
-          <strong>${message}</strong><br>
-          <em>Your feedback:</em> "${feedback}"<br>
-          <em>Your rating:</em> ${rating}
-        </div>`;
+      // Clamp rating between 1 and 5
+      rating = Math.max(1, Math.min(5, Number(rating)));
+
+      // Feedback message
+      var message = "";
+      if (rating == 5) {
+        message = "Wow! Thanks for the awesome rating!";
+      } else if (rating >= 4) {
+        message = "Thank you! We are happy you liked it!";
+      } else if (rating >= 3) {
+        message = "Thanks! We will try to get even better.";
+      } else if (rating >= 2) {
+        message = "Thanks for your honesty. We will work harder!";
+      } else {
+        message = "Sorry you didn't like it. Please tell us how to improve.";
+      }
+
+      // Random emoji for fun
+      var emojis = ['😊','👍','🎉','😃','😄','🥳','🙌','✨'];
+      var randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+      // Show result
+      resultDiv.innerHTML =
+        "<div class='alert alert-success'><b>" + message + " " + randomEmoji + "</b><br>" +
+        "<i>Your feedback:</i> \"" + feedback + "\"<br>" +
+        "<i>Your rating:</i> " + rating + "</div>";
 
       // Reset form, counter, and preview
       form.reset();
