@@ -1,4 +1,5 @@
-/* STYLES // YAO  */
+/* YAO */
+
 .navbar-nav .nav-link {
   color: #E6E8E6;
 }
@@ -8,9 +9,9 @@
 }
 
 body {
-  font-family: "Kanit", sans-serif;
-  background-color: #E6E8E6;
-  color: #505D7B;
+    font-family: "Kanit", sans-serif;
+    background-color: #E6E8E6;
+    color: #505D7B;
     
 }
 
@@ -31,4 +32,4 @@ footer {
     padding: 0px;
     color: #28242D;
     text-align: center;
-}
+} 
