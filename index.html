@@ -18,8 +18,9 @@
 
   <!-- NAVIGATION BAR // YAO -->
   <nav class="navbar navbar-expand-sm navbar-light bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">placeholder</a>
+      <a class="navbar-brand text-light" href="#"> 
+        <img src="Q4-logo.png" alt="Logo" style="width:60px;" class="rounded-pill">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,8 +29,14 @@
           <li class="nav-item">
             <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#projects">Projects</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-bs-toggle="tab" href="#q1-tab">1st Quarter</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="tab" href="#q2-tab">2nd Quarter</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="tab" href="#q3-tab">3rd Quarter</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="tab" href="#q4-tab">4th Quarter</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" href="#next">What's Next</a>
