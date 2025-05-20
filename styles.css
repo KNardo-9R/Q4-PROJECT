@@ -27,6 +27,15 @@ body {
   color: #505D7B;
 }
 
+/* NARDO */
+.WNcard {
+  height: 100%;
+  display: flex;
+  color: #505D7B;
+  background-color: #E6E8E6;
+}
+  
+
 /*CAÑETE*/
 .footer {
   background-color: #505D7B;
