@@ -33,13 +33,14 @@ body {
   display: flex;
   color: #505D7B;
   background-color: #E6E8E6;
+  text-align: center;
 }
   
 
 /*CAÑETE*/
 .footer {
   background-color: #505D7B;
-  color: black;
+  color: #505D7B;
   text-align: center;
   padding: 1rem 0;
   font-family: Arial, sans-serif;
