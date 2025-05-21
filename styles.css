@@ -9,9 +9,9 @@
 }
 
 body {
-    font-family: "Kanit", sans-serif;
-    background-color: #E6E8E6;
-    color: #505D7B;
+  font-family: "Kanit", sans-serif;
+  background-color: #E6E8E6;
+  color: #505D7B;
     
 }
 
@@ -30,7 +30,6 @@ body {
 /* NARDO */
 .WNcard {
   height: 100%;
-  display: flex;
   color: #505D7B;
   background-color: #FFFFFF;
   text-align: center;
