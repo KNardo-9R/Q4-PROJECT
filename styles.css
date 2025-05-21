@@ -32,8 +32,9 @@ body {
   height: 100%;
   display: flex;
   color: #505D7B;
-  background-color: #E6E8E6;
+  background-color: #FFFFFF;
   text-align: center;
+  justify-content: center;
 }
   
 
