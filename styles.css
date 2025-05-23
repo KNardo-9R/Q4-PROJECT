@@ -43,6 +43,11 @@ body {
   margin-right: 50px;
   padding: 20px;
 }
+
+.carousel-inner img {
+/*   crop and center image */
+    object-fit: cover;
+  }
   
 /*CAÑETE*/
 .footer {
